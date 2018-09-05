@@ -8,6 +8,7 @@ import store from './store'
 import VueLazyload from 'vue-lazyload'
 import iView from 'iview'
 import axios from 'axios'
+import i18n from './language'
 import '@/common/stylus/index.styl'
 // import 'iview/dist/styles/iview.css'
 import '../my-theme/dist/iview.css'
@@ -25,7 +26,8 @@ Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  render: h => h(App),
   router,
-  store
+  i18n,
+  store,
+  render: h => h(App)
 })
